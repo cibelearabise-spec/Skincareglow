@@ -3,118 +3,139 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skincare Glow</title>
+  <title>Betowow Skincare</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Fonte elegante Playfair Display para os títulos -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
   <style>
     body {
-      background: linear-gradient(135deg, #1f1211 0%, #3d211e 50%, #170d0c 100%);
-      font-family: system-ui, -apple-system, sans-serif;
+      background-color: #E2E6EE;
+      font-family: 'Plus Jakarta Sans', sans-serif;
     }
-    .glass-card {
-      background: rgba(255, 255, 255, 0.06);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(232, 190, 175, 0.15);
+    .font-serif-title {
+      font-family: 'Playfair Display', serif;
     }
-    .glass-card-hover:hover {
-      background: rgba(255, 255, 255, 0.12);
-      border-color: rgba(217, 107, 82, 0.4);
-      box-shadow: 0 0 20px rgba(217, 107, 82, 0.2);
+    .bg-nude-light {
+      background-color: #F8F3ED;
+    }
+    .bg-nude-card {
+      background-color: #FFFFFF;
+    }
+    .text-terracotta {
+      color: #D36846;
+    }
+    .bg-terracotta {
+      background-color: #D36846;
+    }
+    .border-nude {
+      border-color: #EAE3D9;
     }
     .page { display: none; }
     .page.active { display: flex; flex-direction: column; }
+    
+    /* Scrollbar discreta */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
   </style>
 </head>
-<body class="text-white flex justify-center items-center min-h-screen p-2 sm:p-4">
+<body class="text-stone-800 flex justify-center items-center min-h-screen p-2 sm:p-4">
 
-  <div class="w-full max-w-sm h-[750px] bg-gradient-to-b from-[#2e1a17] via-[#1a0e0d] to-[#0d0706] rounded-[40px] border-4 border-amber-900/40 p-5 flex flex-col justify-between relative overflow-hidden shadow-[0_0_50px_rgba(217,107,82,0.2)]">
-    
-    <!-- Luzes de Fundo -->
-    <div class="absolute -top-10 -left-10 w-56 h-56 bg-orange-500/20 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute top-1/2 -right-10 w-48 h-48 bg-rose-500/15 rounded-full blur-3xl pointer-events-none"></div>
+  <!-- Moldura do Mobile / Container do App Claro -->
+  <div class="w-full max-w-sm h-[750px] bg-[#F9F5F0] rounded-[40px] border-4 border-white p-5 flex flex-col justify-between relative overflow-hidden shadow-2xl">
 
-    <!-- ÁREA DE CONTEÚDO (TELAS DA APLICAÇÃO) -->
-    <div class="z-10 overflow-y-auto pr-1 flex-1">
+    <!-- ÁREA DE CONTEÚDO -->
+    <div class="z-10 overflow-y-auto no-scrollbar pr-1 flex-1">
 
       <!-- TELA 1: HOME -->
       <div id="page-home" class="page active space-y-4">
+        
+        <!-- Header Principal -->
         <div class="flex justify-between items-center pt-2">
-          <div>
-            <p class="text-orange-200/60 text-xs tracking-widest uppercase">✦ Skincare Glow</p>
-            <h1 class="text-xl font-bold text-white tracking-wide">Alta Performance</h1>
+          <div class="flex items-center gap-2">
+            <div class="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center text-white text-xs font-bold">✿</div>
+            <span class="font-bold tracking-tight text-stone-900 text-lg">Betowow</span>
           </div>
-          <button onclick="navigateTo('sacola')" class="glass-card text-xs text-orange-200 font-semibold p-2.5 rounded-full flex items-center justify-center hover:bg-white/10 transition">
-            <i data-lucide="shopping-bag" class="w-4 h-4 text-orange-400"></i>
+          <button onclick="navigateTo('sacola')" class="w-9 h-9 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-700 shadow-sm hover:bg-stone-50 transition">
+            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
           </button>
         </div>
 
-        <div class="glass-card p-5 rounded-3xl relative overflow-hidden">
-          <span class="text-[10px] font-bold text-orange-400 tracking-wider uppercase bg-orange-500/20 px-2.5 py-1 rounded-full">Dermatologia</span>
-          <h2 class="text-xl font-serif mt-3 leading-snug text-amber-50">
-            REVEAL YOUR BEAUTY <em class="text-orange-300 italic font-sans">with</em> SKINCARE
-          </h2>
-          <p class="text-xs text-amber-200/70 mt-2 leading-relaxed">Fórmulas concentradas para desacelerar o envelhecimento e recuperar a saúde da sua pele.</p>
+        <!-- Banner Principal (Inspiração das Imagens) -->
+        <div class="bg-[#F3EBE1] p-5 rounded-3xl border border-[#E8DEC2]/40 relative overflow-hidden">
+          <span class="text-[10px] font-semibold text-stone-500 tracking-widest uppercase">DERMATOLOGIA</span>
           
-          <button onclick="navigateTo('quiz')" class="mt-4 w-full bg-gradient-to-r from-orange-600 to-rose-600 text-white font-bold text-xs py-3 rounded-2xl flex items-center justify-center gap-2 shadow-lg shadow-orange-600/30 hover:opacity-90 transition">
+          <h2 class="text-2xl font-serif-title mt-2 leading-tight text-stone-900">
+            REVEAL YOUR BEAUTY <em class="text-terracotta font-normal italic">with</em> SKINCARE
+          </h2>
+          
+          <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+            Fórmulas concentradas para desacelerar o envelhecimento e recuperar a saúde da sua pele.
+          </p>
+
+          <button onclick="navigateTo('quiz')" class="mt-4 w-full bg-terracotta hover:bg-[#bd5837] text-white font-medium text-xs py-3.5 rounded-full flex items-center justify-center gap-2 shadow-sm transition">
             DESCUBRIR TIPO DE PELE <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </button>
         </div>
 
-        <div onclick="navigateTo('glicacao')" class="glass-card glass-card-hover p-4 rounded-3xl cursor-pointer transition">
-          <div class="flex items-center gap-2 text-orange-400 text-xs font-semibold mb-1">
-            <i data-lucide="dna" class="w-4 h-4"></i> Ciência Cutânea
+        <!-- Card Ciência / Glicação -->
+        <div onclick="navigateTo('glicacao')" class="bg-white p-4 rounded-2xl border border-stone-200/80 shadow-sm cursor-pointer hover:border-orange-200 transition">
+          <div class="flex items-center gap-2 text-terracotta text-xs font-semibold mb-1">
+            <i data-lucide="sparkles" class="w-4 h-4"></i> Ciência Cutânea
           </div>
-          <h3 class="font-bold text-sm text-white">Glicação Cutânea</h3>
-          <p class="text-xs text-amber-200/60 mt-1 line-clamp-2">Entenda como o açúcar danifica o colágeno e como prevenir a flacidez.</p>
+          <h3 class="font-serif-title text-base font-bold text-stone-900">Glicação Cutânea</h3>
+          <p class="text-xs text-stone-500 mt-1 line-clamp-2">Entenda como o açúcar danifica o colágeno e como prevenir a flacidez.</p>
         </div>
 
+        <!-- Seção Tipos de Pele -->
         <div>
-          <h3 class="text-xs font-semibold text-orange-200/80 uppercase tracking-wider mb-2">Tipos de Pele</h3>
+          <h3 class="text-[11px] font-bold text-stone-400 uppercase tracking-wider mb-2">TIPOS DE PELE</h3>
           <div class="grid grid-cols-3 gap-2">
-            <button onclick="navigateTo('oleosa')" class="glass-card glass-card-hover p-3 rounded-2xl flex flex-col items-center justify-center text-center transition">
-              <span class="text-lg mb-1">💧</span>
-              <span class="text-xs font-medium text-amber-100">Oleosa</span>
+            <button onclick="navigateTo('oleosa')" class="bg-white p-3 rounded-2xl border border-stone-200/80 flex flex-col items-center justify-center text-center shadow-sm hover:border-terracotta transition">
+              <span class="text-xl mb-1">💧</span>
+              <span class="text-xs font-semibold text-stone-700">Oleosa</span>
             </button>
-            <button onclick="navigateTo('seca')" class="glass-card glass-card-hover p-3 rounded-2xl flex flex-col items-center justify-center text-center transition">
-              <span class="text-lg mb-1">🌾</span>
-              <span class="text-xs font-medium text-amber-100">Seca</span>
+            <button onclick="navigateTo('seca')" class="bg-white p-3 rounded-2xl border border-stone-200/80 flex flex-col items-center justify-center text-center shadow-sm hover:border-terracotta transition">
+              <span class="text-xl mb-1">🌾</span>
+              <span class="text-xs font-semibold text-stone-700">Seca</span>
             </button>
-            <button onclick="navigateTo('sensivel')" class="glass-card glass-card-hover p-3 rounded-2xl flex flex-col items-center justify-center text-center transition">
-              <span class="text-lg mb-1">🍇</span>
-              <span class="text-xs font-medium text-amber-100">Sensível</span>
+            <button onclick="navigateTo('sensivel')" class="bg-white p-3 rounded-2xl border border-stone-200/80 flex flex-col items-center justify-center text-center shadow-sm hover:border-terracotta transition">
+              <span class="text-xl mb-1">🍇</span>
+              <span class="text-xs font-semibold text-stone-700">Sensível</span>
             </button>
           </div>
         </div>
+
       </div>
 
       <!-- TELA 2: SACOLA -->
       <div id="page-sacola" class="page">
         <div class="flex items-center gap-3 pt-2 mb-6">
-          <button onclick="navigateTo('home')" class="glass-card p-2 rounded-full text-orange-300"><i data-lucide="arrow-left" class="w-4 h-4"></i></button>
-          <h1 class="text-lg font-bold">Sua Sacola</h1>
+          <button onclick="navigateTo('home')" class="w-8 h-8 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-700"><i data-lucide="arrow-left" class="w-4 h-4"></i></button>
+          <h1 class="text-lg font-serif-title font-bold text-stone-900">Sua Sacola</h1>
         </div>
-        <div class="glass-card p-6 rounded-3xl text-center my-auto">
-          <i data-lucide="shopping-bag" class="w-12 h-12 text-orange-400/50 mx-auto mb-3"></i>
-          <h2 class="text-base font-bold text-amber-50">Sua sacola está vazia</h2>
-          <p class="text-xs text-amber-200/60 mt-2 mb-4">Escolha os melhores produtos para a sua rotina de cuidados.</p>
-          <button onclick="navigateTo('home')" class="bg-orange-600 text-white font-bold text-xs py-3 px-6 rounded-2xl inline-block">EXPLORAR TRATAMENTOS</button>
+        <div class="bg-white p-6 rounded-3xl border border-stone-200 text-center my-auto shadow-sm">
+          <i data-lucide="shopping-bag" class="w-12 h-12 text-stone-300 mx-auto mb-3"></i>
+          <h2 class="text-base font-bold text-stone-800">Sua sacola está vazia</h2>
+          <p class="text-xs text-stone-500 mt-2 mb-4">Escolha os melhores produtos para a sua rotina de cuidados.</p>
+          <button onclick="navigateTo('home')" class="bg-terracotta text-white font-medium text-xs py-3 px-6 rounded-full inline-block">EXPLORAR TRATAMENTOS</button>
         </div>
       </div>
 
       <!-- TELA 3: QUIZ -->
       <div id="page-quiz" class="page">
         <div class="flex items-center gap-3 pt-2 mb-6">
-          <button onclick="navigateTo('home')" class="glass-card p-2 rounded-full text-orange-300"><i data-lucide="arrow-left" class="w-4 h-4"></i></button>
-          <h1 class="text-lg font-bold">Diagnóstico de Pele</h1>
+          <button onclick="navigateTo('home')" class="w-8 h-8 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-700"><i data-lucide="arrow-left" class="w-4 h-4"></i></button>
+          <h1 class="text-lg font-serif-title font-bold text-stone-900">Diagnóstico de Pele</h1>
         </div>
-        <div class="glass-card p-5 rounded-3xl space-y-4">
-          <span class="text-[10px] font-bold text-orange-400 uppercase tracking-wider bg-orange-500/20 px-2.5 py-1 rounded-full">Passo 1 de 3</span>
-          <h2 class="text-base font-bold text-white">Como sua pele fica ao longo do dia?</h2>
+        <div class="bg-white p-5 rounded-3xl border border-stone-200 space-y-4 shadow-sm">
+          <span class="text-[10px] font-bold text-terracotta uppercase tracking-wider bg-orange-100/60 px-2.5 py-1 rounded-full">Passo 1 de 3</span>
+          <h2 class="text-base font-serif-title font-bold text-stone-900">Como sua pele fica ao longo do dia?</h2>
           <div class="space-y-2 pt-2">
-            <button onclick="navigateTo('oleosa')" class="w-full text-left glass-card glass-card-hover p-3 rounded-2xl block text-xs text-amber-100 font-medium">✨ Com brilho excessivo e poros dilatados</button>
-            <button onclick="navigateTo('seca')" class="w-full text-left glass-card glass-card-hover p-3 rounded-2xl block text-xs text-amber-100 font-medium">🌵 Repuxando ou ressecada</button>
-            <button onclick="navigateTo('sensivel')" class="w-full text-left glass-card glass-card-hover p-3 rounded-2xl block text-xs text-amber-100 font-medium">🌸 Reativa, vermelha ou sensível</button>
+            <button onclick="navigateTo('oleosa')" class="w-full text-left bg-[#FBF9F6] border border-stone-200/80 p-3.5 rounded-2xl text-xs text-stone-700 font-medium hover:border-terracotta transition">✨ Com brilho excessivo e poros dilatados</button>
+            <button onclick="navigateTo('seca')" class="w-full text-left bg-[#FBF9F6] border border-stone-200/80 p-3.5 rounded-2xl text-xs text-stone-700 font-medium hover:border-terracotta transition">🌵 Repuxando ou ressecada</button>
+            <button onclick="navigateTo('sensivel')" class="w-full text-left bg-[#FBF9F6] border border-stone-200/80 p-3.5 rounded-2xl text-xs text-stone-700 font-medium hover:border-terracotta transition">🌸 Reativa, vermelha ou sensível</button>
           </div>
         </div>
       </div>
@@ -122,69 +143,69 @@
       <!-- TELA 4: GLICAÇÃO -->
       <div id="page-glicacao" class="page">
         <div class="flex items-center gap-3 pt-2 mb-6">
-          <button onclick="navigateTo('home')" class="glass-card p-2 rounded-full text-orange-300"><i data-lucide="arrow-left" class="w-4 h-4"></i></button>
-          <h1 class="text-lg font-bold">Ciência & Dermatologia</h1>
+          <button onclick="navigateTo('home')" class="w-8 h-8 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-700"><i data-lucide="arrow-left" class="w-4 h-4"></i></button>
+          <h1 class="text-lg font-serif-title font-bold text-stone-900">Ciência & Dermatologia</h1>
         </div>
-        <div class="glass-card p-5 rounded-3xl space-y-3 mb-4">
-          <span class="text-[10px] font-bold text-orange-400 uppercase tracking-wider bg-orange-500/20 px-2.5 py-1 rounded-full">Artigo Técnico</span>
-          <h2 class="text-lg font-bold text-white">O que é Glicação Cutânea?</h2>
-          <p class="text-xs text-amber-200/70 leading-relaxed">A glicação ocorre quando o excesso de açúcar no organismo se une às fibras de colágeno e elastina, tornando-as rígidas.</p>
-          <p class="text-xs text-amber-200/70 leading-relaxed">Isso resulta em perda de firmeza, opacidade e linhas de expressão precoces.</p>
+        <div class="bg-white p-5 rounded-3xl border border-stone-200 space-y-3 mb-4 shadow-sm">
+          <span class="text-[10px] font-bold text-terracotta uppercase tracking-wider bg-orange-100/60 px-2.5 py-1 rounded-full">Artigo Técnico</span>
+          <h2 class="text-lg font-serif-title font-bold text-stone-900">O que é Glicação Cutânea?</h2>
+          <p class="text-xs text-stone-600 leading-relaxed">A glicação ocorre quando o excesso de açúcar no organismo se une às fibras de colágeno e elastina, tornando-as rígidas.</p>
+          <p class="text-xs text-stone-600 leading-relaxed">Isso resulta em perda de firmeza, opacidade e linhas de expressão precoces.</p>
         </div>
-        <button onclick="navigateTo('sacola')" class="w-full bg-orange-600 text-white font-bold text-xs py-3 rounded-2xl flex items-center justify-center gap-2">VER ANTIOXIDANTES RECOMENDADOS</button>
+        <button onclick="navigateTo('sacola')" class="w-full bg-terracotta text-white font-medium text-xs py-3.5 rounded-full flex items-center justify-center gap-2">VER ANTIOXIDANTES RECOMENDADOS</button>
       </div>
 
       <!-- TELA 5: OLEOSA -->
       <div id="page-oleosa" class="page">
         <div class="flex items-center gap-3 pt-2 mb-6">
-          <button onclick="navigateTo('home')" class="glass-card p-2 rounded-full text-orange-300"><i data-lucide="arrow-left" class="w-4 h-4"></i></button>
-          <h1 class="text-lg font-bold">Pele Oleosa</h1>
+          <button onclick="navigateTo('home')" class="w-8 h-8 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-700"><i data-lucide="arrow-left" class="w-4 h-4"></i></button>
+          <h1 class="text-lg font-serif-title font-bold text-stone-900">Pele Oleosa</h1>
         </div>
-        <div class="glass-card p-5 rounded-3xl space-y-3">
-          <span class="text-2xl">💧</span>
-          <h2 class="text-lg font-bold text-white">Controle de Oleosidade & Poros</h2>
-          <p class="text-xs text-amber-200/70 leading-relaxed">Fórmulas ultraleves com Ácido Salicílico e Ácido Hialurônico para equilibrar a produção de sebo sem ressecar.</p>
-          <button onclick="navigateTo('sacola')" class="w-full bg-orange-600 text-white font-bold text-xs py-3 rounded-2xl flex items-center justify-center mt-4">ADICIONAR KIT OLEOSA À SACOLA</button>
+        <div class="bg-white p-5 rounded-3xl border border-stone-200 space-y-3 shadow-sm">
+          <span class="text-3xl">💧</span>
+          <h2 class="text-lg font-serif-title font-bold text-stone-900">Controle de Oleosidade & Poros</h2>
+          <p class="text-xs text-stone-600 leading-relaxed">Fórmulas ultraleves com Ácido Salicílico e Ácido Hialurônico para equilibrar a produção de sebo sem ressecar.</p>
+          <button onclick="navigateTo('sacola')" class="w-full bg-terracotta text-white font-medium text-xs py-3.5 rounded-full flex items-center justify-center mt-4">ADICIONAR KIT OLEOSA À SACOLA</button>
         </div>
       </div>
 
       <!-- TELA 6: SECA -->
       <div id="page-seca" class="page">
         <div class="flex items-center gap-3 pt-2 mb-6">
-          <button onclick="navigateTo('home')" class="glass-card p-2 rounded-full text-orange-300"><i data-lucide="arrow-left" class="w-4 h-4"></i></button>
-          <h1 class="text-lg font-bold">Pele Seca</h1>
+          <button onclick="navigateTo('home')" class="w-8 h-8 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-700"><i data-lucide="arrow-left" class="w-4 h-4"></i></button>
+          <h1 class="text-lg font-serif-title font-bold text-stone-900">Pele Seca</h1>
         </div>
-        <div class="glass-card p-5 rounded-3xl space-y-3">
-          <span class="text-2xl">🌾</span>
-          <h2 class="text-lg font-bold text-white">Nutrição Intensa & Barreira</h2>
-          <p class="text-xs text-amber-200/70 leading-relaxed">Restaure a hidratação profunda da sua pele com Ceramidas e Óleos Nutritivos.</p>
-          <button onclick="navigateTo('sacola')" class="w-full bg-orange-600 text-white font-bold text-xs py-3 rounded-2xl flex items-center justify-center mt-4">ADICIONAR KIT SECA À SACOLA</button>
+        <div class="bg-white p-5 rounded-3xl border border-stone-200 space-y-3 shadow-sm">
+          <span class="text-3xl">🌾</span>
+          <h2 class="text-lg font-serif-title font-bold text-stone-900">Nutrição Intensa & Barreira</h2>
+          <p class="text-xs text-stone-600 leading-relaxed">Restaure a hidratação profunda da sua pele com Ceramidas e Óleos Nutritivos.</p>
+          <button onclick="navigateTo('sacola')" class="w-full bg-terracotta text-white font-medium text-xs py-3.5 rounded-full flex items-center justify-center mt-4">ADICIONAR KIT SECA À SACOLA</button>
         </div>
       </div>
 
       <!-- TELA 7: SENSÍVEL -->
       <div id="page-sensivel" class="page">
         <div class="flex items-center gap-3 pt-2 mb-6">
-          <button onclick="navigateTo('home')" class="glass-card p-2 rounded-full text-orange-300"><i data-lucide="arrow-left" class="w-4 h-4"></i></button>
-          <h1 class="text-lg font-bold">Pele Sensível</h1>
+          <button onclick="navigateTo('home')" class="w-8 h-8 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-700"><i data-lucide="arrow-left" class="w-4 h-4"></i></button>
+          <h1 class="text-lg font-serif-title font-bold text-stone-900">Pele Sensível</h1>
         </div>
-        <div class="glass-card p-5 rounded-3xl space-y-3">
-          <span class="text-2xl">🍇</span>
-          <h2 class="text-lg font-bold text-white">Acalmante & Anti-Vermelhidão</h2>
-          <p class="text-xs text-amber-200/70 leading-relaxed">Fórmulas hipoalergênicas enriquecidas com Centella Asiática e Camomila.</p>
-          <button onclick="navigateTo('sacola')" class="w-full bg-orange-600 text-white font-bold text-xs py-3 rounded-2xl flex items-center justify-center mt-4">ADICIONAR KIT SENSÍVEL À SACOLA</button>
+        <div class="bg-white p-5 rounded-3xl border border-stone-200 space-y-3 shadow-sm">
+          <span class="text-3xl">🍇</span>
+          <h2 class="text-lg font-serif-title font-bold text-stone-900">Acalmante & Anti-Vermelhidão</h2>
+          <p class="text-xs text-stone-600 leading-relaxed">Fórmulas hipoalergênicas enriquecidas com Centella Asiática e Camomila.</p>
+          <button onclick="navigateTo('sacola')" class="w-full bg-terracotta text-white font-medium text-xs py-3.5 rounded-full flex items-center justify-center mt-4">ADICIONAR KIT SENSÍVEL À SACOLA</button>
         </div>
       </div>
 
     </div>
 
-    <!-- Navegação Inferior -->
-    <div class="glass-card rounded-full p-2.5 flex justify-around items-center z-10 mt-2">
-      <button onclick="navigateTo('home')" class="bg-gradient-to-r from-orange-500 to-rose-500 p-2.5 rounded-full text-white shadow-lg shadow-orange-500/40">
-        <i data-lucide="home" class="w-5 h-5"></i>
+    <!-- Navegação Inferior (Barra Clara) -->
+    <div class="bg-stone-900 text-white rounded-full p-2 flex justify-around items-center z-10 mt-2 shadow-lg">
+      <button onclick="navigateTo('home')" class="bg-terracotta p-2.5 rounded-full text-white shadow-sm">
+        <i data-lucide="home" class="w-4 h-4"></i>
       </button>
-      <button onclick="navigateTo('quiz')" class="text-orange-200/60 hover:text-white transition p-2"><i data-lucide="sparkles" class="w-5 h-5"></i></button>
-      <button onclick="navigateTo('sacola')" class="text-orange-200/60 hover:text-white transition p-2"><i data-lucide="shopping-bag" class="w-5 h-5"></i></button>
+      <button onclick="navigateTo('quiz')" class="text-stone-400 hover:text-white transition p-2"><i data-lucide="sparkles" class="w-4 h-4"></i></button>
+      <button onclick="navigateTo('sacola')" class="text-stone-400 hover:text-white transition p-2"><i data-lucide="shopping-bag" class="w-4 h-4"></i></button>
     </div>
 
   </div>
@@ -192,7 +213,6 @@
   <script>
     lucide.createIcons();
 
-    // Função para trocar de tela dentro de um único arquivo!
     function navigateTo(pageId) {
       const pages = document.querySelectorAll('.page');
       pages.forEach(page => page.classList.remove('active'));
