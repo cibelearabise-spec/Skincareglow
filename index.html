@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -10,26 +9,26 @@
 <body>
 
   <div class="app-container">
-    <!-- Cabeçalho com botão da sacola clicável -->
+    <!-- Cabeçalho: Clicar no carrinho vai para sacola.html -->
     <header class="header">
       <div class="brand">✦ SKINCARE GLOW</div>
-      <button type="button" class="icon-btn cart-btn" onclick="alert('Sacola clicada!')" aria-label="Carrinho">
+      <a href="sacola.html" class="icon-btn cart-btn" aria-label="Carrinho">
         🛍️
-      </button>
+      </a>
     </header>
 
-    <!-- Banner Principal -->
+    <!-- Banner Principal: Clicar no botão vai para quiz.html -->
     <section class="card banner-card">
       <span class="tag-orange">ALTA PERFORMANCE</span>
       <h1>REVEAL YOUR BEAUTY <em>with</em> SKINCARE</h1>
       <p>Fórmulas concentradas para desacelerar o envelhecimento e recuperar a saúde da sua pele.</p>
       
-      <button type="button" class="btn-primary" onclick="alert('Descobrir tipo de pele clicado!')">
+      <a href="quiz.html" class="btn-primary">
         DESCUBRIR TIPO DE PELE &rarr;
-      </button>
+      </a>
     </section>
 
-    <!-- Card Dermatologia -->
+    <!-- Card Dermatologia: Clicar vai para glicacao.html -->
     <section class="card dark-card">
       <div class="card-subtitle">
         <span>🧬</span> Dermatologia & Ciência
@@ -37,24 +36,24 @@
       <h2>Glicação Cutânea</h2>
       <p>Saiba como o excesso de açúcar danifica as fibras de colágeno e acelera o envelhecimento.</p>
       
-      <a href="#entender" class="link-orange" onclick="alert('Entender e Prevenir clicado!')">
+      <a href="glicacao.html" class="link-orange">
         Entender e Prevenir &rarr;
       </a>
     </section>
 
-    <!-- Seção Pele & Tratamentos com botões clicáveis -->
+    <!-- Seção Pele & Tratamentos: Links para cada tipo de pele -->
     <section class="treatments-section">
       <h3>Pele & Tratamentos</h3>
       <div class="buttons-group">
-        <button type="button" class="pill-btn" onclick="alert('Pele Oleosa clicada!')">
+        <a href="pele-oleosa.html" class="pill-btn">
           💧 Oleosa
-        </button>
-        <button type="button" class="pill-btn" onclick="alert('Pele Seca clicada!')">
+        </a>
+        <a href="pele-seca.html" class="pill-btn">
           🌾 Seca
-        </button>
-        <button type="button" class="pill-btn" onclick="alert('Pele Sensível clicada!')">
+        </a>
+        <a href="pele-sensivel.html" class="pill-btn">
           🍇 Sensível
-        </button>
+        </a>
       </div>
     </section>
   </div>
