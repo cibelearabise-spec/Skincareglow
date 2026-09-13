@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+/* Simulação da tela mobile */
+.app-container {
+  width: 100%;
+  max-width: 390px;
+  background-color: #FAF6F0;
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Correção de z-index e cursor para garantir os cliques */
+button, a {
+  position: relative;
+  z-index: 10;
+  cursor: pointer !important;
+  border: none;
+  background: none;
+  text-decoration: none;
+  outline: none;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+  color: #1A1A1A;
+}
+
+.cart-btn {
+  background-color: #EFE7DE;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+/* Cards */
+.card {
+  border-radius: 24px;
+  padding: 24px 20px;
+  margin-bottom: 16px;
+}
+
+/* Banner Principal */
+.banner-card {
+  background-color: #F3EAE1;
+}
+
+.tag-orange {
+  color: #D96B52;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.banner-card h1 {
+  font-family: Georgia, serif;
+  font-size: 26px;
+  line-height: 1.15;
+  color: #26211E;
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+.banner-card h1 em {
+  font-style: italic;
+  color: #C8836A;
+}
+
+.banner-card p {
+  color: #6E6660;
+  font-size: 13px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: #26211E;
+  color: #FFFFFF;
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Card Escuro */
+.dark-card {
+  background-color: #1E1C1A;
+  color: #FFFFFF;
+}
+
+.card-subtitle {
+  color: #E86C45;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dark-card h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.dark-card p {
+  color: #A39E98;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.link-orange {
+  color: #E86C45;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Botões da Seção Pele & Tratamentos */
+.treatments-section h3 {
+  font-size: 16px;
+  color: #26211E;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.buttons-group {
+  display: flex;
+  gap: 8px;
+}
+
+.pill-btn {
+  background-color: #F0E6DD;
+  color: #332E2B;
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Feedback ao clicar */
+.pill-btn:active, .btn-primary:active, .cart-btn:active {
+  opacity: 0.7;
+}
