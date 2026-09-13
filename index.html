@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Betowow Skincare</title>
+  <title>Skincare Glow</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <!-- Fonte elegante Playfair Display para os títulos -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
@@ -14,102 +13,134 @@
       background-color: #E2E6EE;
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
-    .font-serif-title {
-      font-family: 'Playfair Display', serif;
-    }
-    .bg-nude-light {
-      background-color: #F8F3ED;
-    }
-    .bg-nude-card {
-      background-color: #FFFFFF;
-    }
-    .text-terracotta {
-      color: #D36846;
-    }
-    .bg-terracotta {
-      background-color: #D36846;
-    }
-    .border-nude {
-      border-color: #EAE3D9;
-    }
+    .font-serif-title { font-family: 'Playfair Display', serif; }
+    .bg-terracotta { background-color: #D36846; }
+    .text-terracotta { color: #D36846; }
     .page { display: none; }
     .page.active { display: flex; flex-direction: column; }
-    
-    /* Scrollbar discreta */
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
   </style>
 </head>
 <body class="text-stone-800 flex justify-center items-center min-h-screen p-2 sm:p-4">
 
-  <!-- Moldura do Mobile / Container do App Claro -->
+  <!-- Moldura Mobile -->
   <div class="w-full max-w-sm h-[750px] bg-[#F9F5F0] rounded-[40px] border-4 border-white p-5 flex flex-col justify-between relative overflow-hidden shadow-2xl">
 
     <!-- ÁREA DE CONTEÚDO -->
-    <div class="z-10 overflow-y-auto no-scrollbar pr-1 flex-1">
+    <div class="z-10 overflow-y-auto no-scrollbar pr-1 flex-1 pb-4">
 
       <!-- TELA 1: HOME -->
       <div id="page-home" class="page active space-y-4">
         
-        <!-- Header Principal -->
+        <!-- Header -->
         <div class="flex justify-between items-center pt-2">
           <div class="flex items-center gap-2">
             <div class="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center text-white text-xs font-bold">✿</div>
-            <span class="font-bold tracking-tight text-stone-900 text-lg">Betowow</span>
+            <span class="font-bold tracking-tight text-stone-900 text-lg">Skincare Glow</span>
           </div>
           <button onclick="navigateTo('sacola')" class="w-9 h-9 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-700 shadow-sm hover:bg-stone-50 transition">
             <i data-lucide="shopping-bag" class="w-4 h-4"></i>
           </button>
         </div>
 
-        <!-- Banner Principal (Inspiração das Imagens) -->
+        <!-- Banner com Destaque -->
         <div class="bg-[#F3EBE1] p-5 rounded-3xl border border-[#E8DEC2]/40 relative overflow-hidden">
-          <span class="text-[10px] font-semibold text-stone-500 tracking-widest uppercase">DERMATOLOGIA</span>
-          
-          <h2 class="text-2xl font-serif-title mt-2 leading-tight text-stone-900">
-            REVEAL YOUR BEAUTY <em class="text-terracotta font-normal italic">with</em> SKINCARE
-          </h2>
-          
-          <p class="text-xs text-stone-600 mt-2 leading-relaxed">
-            Fórmulas concentradas para desacelerar o envelhecimento e recuperar a saúde da sua pele.
-          </p>
-
-          <button onclick="navigateTo('quiz')" class="mt-4 w-full bg-terracotta hover:bg-[#bd5837] text-white font-medium text-xs py-3.5 rounded-full flex items-center justify-center gap-2 shadow-sm transition">
-            DESCUBRIR TIPO DE PELE <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </button>
+          <div class="relative z-10">
+            <span class="text-[10px] font-semibold text-stone-500 tracking-widest uppercase">DERMATOLOGIA</span>
+            <h2 class="text-2xl font-serif-title mt-2 leading-tight text-stone-900">
+              REVEAL YOUR BEAUTY <em class="text-terracotta font-normal italic">with</em> SKINCARE
+            </h2>
+            <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+              Fórmulas concentradas para desacelerar o envelhecimento e recuperar a saúde da sua pele.
+            </p>
+            <button onclick="navigateTo('quiz')" class="mt-4 w-full bg-terracotta hover:bg-[#bd5837] text-white font-medium text-xs py-3.5 rounded-full flex items-center justify-center gap-2 shadow-sm transition">
+              DESCUBRIR TIPO DE PELE <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
         </div>
 
-        <!-- Card Ciência / Glicação -->
-        <div onclick="navigateTo('glicacao')" class="bg-white p-4 rounded-2xl border border-stone-200/80 shadow-sm cursor-pointer hover:border-orange-200 transition">
-          <div class="flex items-center gap-2 text-terracotta text-xs font-semibold mb-1">
-            <i data-lucide="sparkles" class="w-4 h-4"></i> Ciência Cutânea
+        <!-- Foto de Destaque da Marca -->
+        <div class="relative h-32 rounded-2xl overflow-hidden shadow-sm">
+          <img src="https://images.unsplash.com/photo-1608248597262-838d82136e0d?auto=format&fit=crop&w=600&q=80" alt="Produtos Skincare" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent flex items-end p-3">
+            <span class="text-white text-xs font-medium">Linha Essencial 100% Orgânica</span>
           </div>
-          <h3 class="font-serif-title text-base font-bold text-stone-900">Glicação Cutânea</h3>
-          <p class="text-xs text-stone-500 mt-1 line-clamp-2">Entenda como o açúcar danifica o colágeno e como prevenir a flacidez.</p>
         </div>
 
         <!-- Seção Tipos de Pele -->
         <div>
-          <h3 class="text-[11px] font-bold text-stone-400 uppercase tracking-wider mb-2">TIPOS DE PELE</h3>
+          <h3 class="text-[11px] font-bold text-stone-400 uppercase tracking-wider mb-2">CATEGORIAS & PELE</h3>
           <div class="grid grid-cols-3 gap-2">
-            <button onclick="navigateTo('oleosa')" class="bg-white p-3 rounded-2xl border border-stone-200/80 flex flex-col items-center justify-center text-center shadow-sm hover:border-terracotta transition">
-              <span class="text-xl mb-1">💧</span>
-              <span class="text-xs font-semibold text-stone-700">Oleosa</span>
+            <button onclick="navigateTo('oleosa')" class="bg-white p-2.5 rounded-2xl border border-stone-200/80 flex flex-col items-center shadow-sm hover:border-terracotta transition">
+              <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=150&q=80" class="w-10 h-10 rounded-full object-cover mb-1" alt="Pele Oleosa">
+              <span class="text-[11px] font-semibold text-stone-700">Oleosa</span>
             </button>
-            <button onclick="navigateTo('seca')" class="bg-white p-3 rounded-2xl border border-stone-200/80 flex flex-col items-center justify-center text-center shadow-sm hover:border-terracotta transition">
-              <span class="text-xl mb-1">🌾</span>
-              <span class="text-xs font-semibold text-stone-700">Seca</span>
+            <button onclick="navigateTo('seca')" class="bg-white p-2.5 rounded-2xl border border-stone-200/80 flex flex-col items-center shadow-sm hover:border-terracotta transition">
+              <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=150&q=80" class="w-10 h-10 rounded-full object-cover mb-1" alt="Pele Seca">
+              <span class="text-[11px] font-semibold text-stone-700">Seca</span>
             </button>
-            <button onclick="navigateTo('sensivel')" class="bg-white p-3 rounded-2xl border border-stone-200/80 flex flex-col items-center justify-center text-center shadow-sm hover:border-terracotta transition">
-              <span class="text-xl mb-1">🍇</span>
-              <span class="text-xs font-semibold text-stone-700">Sensível</span>
+            <button onclick="navigateTo('sensivel')" class="bg-white p-2.5 rounded-2xl border border-stone-200/80 flex flex-col items-center shadow-sm hover:border-terracotta transition">
+              <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=150&q=80" class="w-10 h-10 rounded-full object-cover mb-1" alt="Pele Sensível">
+              <span class="text-[11px] font-semibold text-stone-700">Sensível</span>
             </button>
           </div>
         </div>
 
       </div>
 
-      <!-- TELA 2: SACOLA -->
+      <!-- TELA PELE OLEOSA -->
+      <div id="page-oleosa" class="page">
+        <div class="flex items-center gap-3 pt-2 mb-4">
+          <button onclick="navigateTo('home')" class="w-8 h-8 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-700"><i data-lucide="arrow-left" class="w-4 h-4"></i></button>
+          <h1 class="text-lg font-serif-title font-bold text-stone-900">Tratamento Oleosidade</h1>
+        </div>
+        <div class="bg-white p-4 rounded-3xl border border-stone-200 space-y-3 shadow-sm">
+          <div class="w-full h-44 rounded-2xl overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover" alt="Sérum Oleosidade">
+          </div>
+          <span class="text-[10px] font-bold text-terracotta uppercase tracking-wider bg-orange-100/60 px-2.5 py-1 rounded-full">Sérum BHA + Niacinamida</span>
+          <h2 class="text-lg font-serif-title font-bold text-stone-900">Kit Equilibra Glow</h2>
+          <p class="text-xs text-stone-600 leading-relaxed">Fórmulas ultraleves desenvolvidas para controlar o sebo, desobstruir os poros e manter a hidratação na medida certa.</p>
+          <button onclick="navigateTo('sacola')" class="w-full bg-terracotta text-white font-medium text-xs py-3.5 rounded-full flex items-center justify-center mt-2">ADICIONAR À SACOLA - R$ 149,00</button>
+        </div>
+      </div>
+
+      <!-- TELA PELE SECA -->
+      <div id="page-seca" class="page">
+        <div class="flex items-center gap-3 pt-2 mb-4">
+          <button onclick="navigateTo('home')" class="w-8 h-8 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-700"><i data-lucide="arrow-left" class="w-4 h-4"></i></button>
+          <h1 class="text-lg font-serif-title font-bold text-stone-900">Nutrição Profunda</h1>
+        </div>
+        <div class="bg-white p-4 rounded-3xl border border-stone-200 space-y-3 shadow-sm">
+          <div class="w-full h-44 rounded-2xl overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover" alt="Creme Pele Seca">
+          </div>
+          <span class="text-[10px] font-bold text-terracotta uppercase tracking-wider bg-orange-100/60 px-2.5 py-1 rounded-full">Creme Ceramidas + Óleos</span>
+          <h2 class="text-lg font-serif-title font-bold text-stone-900">Kit Nutri Intensive</h2>
+          <p class="text-xs text-stone-600 leading-relaxed">Restaura a barreira cutânea, elimina o repuxamento e devolve o viço natural com nutrição de alta densidade.</p>
+          <button onclick="navigateTo('sacola')" class="w-full bg-terracotta text-white font-medium text-xs py-3.5 rounded-full flex items-center justify-center mt-2">ADICIONAR À SACOLA - R$ 169,00</button>
+        </div>
+      </div>
+
+      <!-- TELA PELE SENSÍVEL -->
+      <div id="page-sensivel" class="page">
+        <div class="flex items-center gap-3 pt-2 mb-4">
+          <button onclick="navigateTo('home')" class="w-8 h-8 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-700"><i data-lucide="arrow-left" class="w-4 h-4"></i></button>
+          <h1 class="text-lg font-serif-title font-bold text-stone-900">Pele Sensível</h1>
+        </div>
+        <div class="bg-white p-4 rounded-3xl border border-stone-200 space-y-3 shadow-sm">
+          <div class="w-full h-44 rounded-2xl overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover" alt="Sérum Calmante">
+          </div>
+          <span class="text-[10px] font-bold text-terracotta uppercase tracking-wider bg-orange-100/60 px-2.5 py-1 rounded-full">Centella Asiática + Camomila</span>
+          <h2 class="text-lg font-serif-title font-bold text-stone-900">Kit Calm Relief</h2>
+          <p class="text-xs text-stone-600 leading-relaxed">Fórmula hipoalergênica para reduzir a vermelhidão, acalmar irritações e reforçar a defesa biológica da pele.</p>
+          <button onclick="navigateTo('sacola')" class="w-full bg-terracotta text-white font-medium text-xs py-3.5 rounded-full flex items-center justify-center mt-2">ADICIONAR À SACOLA - R$ 159,00</button>
+        </div>
+      </div>
+
+      <!-- TELA SACOLA -->
       <div id="page-sacola" class="page">
         <div class="flex items-center gap-3 pt-2 mb-6">
           <button onclick="navigateTo('home')" class="w-8 h-8 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-700"><i data-lucide="arrow-left" class="w-4 h-4"></i></button>
@@ -123,7 +154,7 @@
         </div>
       </div>
 
-      <!-- TELA 3: QUIZ -->
+      <!-- TELA QUIZ -->
       <div id="page-quiz" class="page">
         <div class="flex items-center gap-3 pt-2 mb-6">
           <button onclick="navigateTo('home')" class="w-8 h-8 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-700"><i data-lucide="arrow-left" class="w-4 h-4"></i></button>
@@ -140,72 +171,15 @@
         </div>
       </div>
 
-      <!-- TELA 4: GLICAÇÃO -->
-      <div id="page-glicacao" class="page">
-        <div class="flex items-center gap-3 pt-2 mb-6">
-          <button onclick="navigateTo('home')" class="w-8 h-8 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-700"><i data-lucide="arrow-left" class="w-4 h-4"></i></button>
-          <h1 class="text-lg font-serif-title font-bold text-stone-900">Ciência & Dermatologia</h1>
-        </div>
-        <div class="bg-white p-5 rounded-3xl border border-stone-200 space-y-3 mb-4 shadow-sm">
-          <span class="text-[10px] font-bold text-terracotta uppercase tracking-wider bg-orange-100/60 px-2.5 py-1 rounded-full">Artigo Técnico</span>
-          <h2 class="text-lg font-serif-title font-bold text-stone-900">O que é Glicação Cutânea?</h2>
-          <p class="text-xs text-stone-600 leading-relaxed">A glicação ocorre quando o excesso de açúcar no organismo se une às fibras de colágeno e elastina, tornando-as rígidas.</p>
-          <p class="text-xs text-stone-600 leading-relaxed">Isso resulta em perda de firmeza, opacidade e linhas de expressão precoces.</p>
-        </div>
-        <button onclick="navigateTo('sacola')" class="w-full bg-terracotta text-white font-medium text-xs py-3.5 rounded-full flex items-center justify-center gap-2">VER ANTIOXIDANTES RECOMENDADOS</button>
-      </div>
-
-      <!-- TELA 5: OLEOSA -->
-      <div id="page-oleosa" class="page">
-        <div class="flex items-center gap-3 pt-2 mb-6">
-          <button onclick="navigateTo('home')" class="w-8 h-8 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-700"><i data-lucide="arrow-left" class="w-4 h-4"></i></button>
-          <h1 class="text-lg font-serif-title font-bold text-stone-900">Pele Oleosa</h1>
-        </div>
-        <div class="bg-white p-5 rounded-3xl border border-stone-200 space-y-3 shadow-sm">
-          <span class="text-3xl">💧</span>
-          <h2 class="text-lg font-serif-title font-bold text-stone-900">Controle de Oleosidade & Poros</h2>
-          <p class="text-xs text-stone-600 leading-relaxed">Fórmulas ultraleves com Ácido Salicílico e Ácido Hialurônico para equilibrar a produção de sebo sem ressecar.</p>
-          <button onclick="navigateTo('sacola')" class="w-full bg-terracotta text-white font-medium text-xs py-3.5 rounded-full flex items-center justify-center mt-4">ADICIONAR KIT OLEOSA À SACOLA</button>
-        </div>
-      </div>
-
-      <!-- TELA 6: SECA -->
-      <div id="page-seca" class="page">
-        <div class="flex items-center gap-3 pt-2 mb-6">
-          <button onclick="navigateTo('home')" class="w-8 h-8 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-700"><i data-lucide="arrow-left" class="w-4 h-4"></i></button>
-          <h1 class="text-lg font-serif-title font-bold text-stone-900">Pele Seca</h1>
-        </div>
-        <div class="bg-white p-5 rounded-3xl border border-stone-200 space-y-3 shadow-sm">
-          <span class="text-3xl">🌾</span>
-          <h2 class="text-lg font-serif-title font-bold text-stone-900">Nutrição Intensa & Barreira</h2>
-          <p class="text-xs text-stone-600 leading-relaxed">Restaure a hidratação profunda da sua pele com Ceramidas e Óleos Nutritivos.</p>
-          <button onclick="navigateTo('sacola')" class="w-full bg-terracotta text-white font-medium text-xs py-3.5 rounded-full flex items-center justify-center mt-4">ADICIONAR KIT SECA À SACOLA</button>
-        </div>
-      </div>
-
-      <!-- TELA 7: SENSÍVEL -->
-      <div id="page-sensivel" class="page">
-        <div class="flex items-center gap-3 pt-2 mb-6">
-          <button onclick="navigateTo('home')" class="w-8 h-8 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-700"><i data-lucide="arrow-left" class="w-4 h-4"></i></button>
-          <h1 class="text-lg font-serif-title font-bold text-stone-900">Pele Sensível</h1>
-        </div>
-        <div class="bg-white p-5 rounded-3xl border border-stone-200 space-y-3 shadow-sm">
-          <span class="text-3xl">🍇</span>
-          <h2 class="text-lg font-serif-title font-bold text-stone-900">Acalmante & Anti-Vermelhidão</h2>
-          <p class="text-xs text-stone-600 leading-relaxed">Fórmulas hipoalergênicas enriquecidas com Centella Asiática e Camomila.</p>
-          <button onclick="navigateTo('sacola')" class="w-full bg-terracotta text-white font-medium text-xs py-3.5 rounded-full flex items-center justify-center mt-4">ADICIONAR KIT SENSÍVEL À SACOLA</button>
-        </div>
-      </div>
-
     </div>
 
-    <!-- Navegação Inferior (Barra Clara) -->
-    <div class="bg-stone-900 text-white rounded-full p-2 flex justify-around items-center z-10 mt-2 shadow-lg">
+    <!-- Navegação Inferior (Ajustada para tom Nude/Claro combinando com o app) -->
+    <div class="bg-white/90 backdrop-blur-md border border-stone-200 text-stone-800 rounded-full p-2 flex justify-around items-center z-10 shadow-md">
       <button onclick="navigateTo('home')" class="bg-terracotta p-2.5 rounded-full text-white shadow-sm">
         <i data-lucide="home" class="w-4 h-4"></i>
       </button>
-      <button onclick="navigateTo('quiz')" class="text-stone-400 hover:text-white transition p-2"><i data-lucide="sparkles" class="w-4 h-4"></i></button>
-      <button onclick="navigateTo('sacola')" class="text-stone-400 hover:text-white transition p-2"><i data-lucide="shopping-bag" class="w-4 h-4"></i></button>
+      <button onclick="navigateTo('quiz')" class="text-stone-500 hover:text-stone-900 transition p-2"><i data-lucide="sparkles" class="w-4 h-4"></i></button>
+      <button onclick="navigateTo('sacola')" class="text-stone-500 hover:text-stone-900 transition p-2"><i data-lucide="shopping-bag" class="w-4 h-4"></i></button>
     </div>
 
   </div>
