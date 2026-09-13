@@ -1,263 +1,62 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skincare Glow</title>
-  
-  <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-
-  <style>
-    /* Reset & Variáveis de Estilo */
-    :root {
-      --bg-primary: #FDF8F5;
-      --bg-secondary: #F7ECE5;
-      --card-dark: #1C1A18;
-      --accent-orange: #E06D53;
-      --text-primary: #2B2623;
-      --text-secondary: #7A726D;
-      --text-light: #FFFFFF;
-      --tag-bg: #EFE3DA;
-      --font-serif: 'Playfair Display', serif;
-      --font-sans: 'Inter', sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: var(--font-sans);
-    }
-
-    body {
-      background-color: #EAE6E1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-    }
-
-    /* Moldura do Celular */
-    .phone-mockup {
-      width: 100%;
-      max-width: 390px;
-      height: 844px;
-      background-color: var(--bg-primary);
-      border-radius: 40px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-      border: 8px solid #2B2623;
-      overflow-y: auto;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .phone-mockup::-webkit-scrollbar {
-      display: none;
-    }
-
-    .content {
-      padding: 20px;
-    }
-
-    /* Header */
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 10px;
-      margin-bottom: 20px;
-    }
-
-    .brand-name {
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      color: var(--text-primary);
-    }
-
-    .icon-bag {
-      width: 36px;
-      height: 36px;
-      background-color: var(--bg-secondary);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
-
-    /* Hero Card */
-    .hero-card {
-      background-color: var(--bg-secondary);
-      border-radius: 24px;
-      padding: 24px;
-      margin-bottom: 20px;
-    }
-
-    .hero-subtitle {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      color: var(--accent-orange);
-      margin-bottom: 8px;
-      text-transform: uppercase;
-    }
-
-    .hero-title {
-      font-family: var(--font-serif);
-      font-size: 28px;
-      font-weight: 400;
-      color: var(--text-primary);
-      line-height: 1.2;
-      margin-bottom: 12px;
-    }
-
-    .hero-title em {
-      font-family: var(--font-serif);
-      font-style: italic;
-      color: var(--accent-orange);
-    }
-
-    .hero-desc {
-      font-size: 13px;
-      color: var(--text-secondary);
-      line-height: 1.5;
-      margin-bottom: 20px;
-    }
-
-    .cta-btn {
-      background-color: var(--text-primary);
-      color: var(--text-light);
-      border: none;
-      width: 100%;
-      padding: 14px;
-      border-radius: 30px;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    /* Glycation Card */
-    .glycation-card {
-      background-color: var(--card-dark);
-      border-radius: 24px;
-      padding: 24px;
-      color: var(--text-light);
-      margin-bottom: 24px;
-      cursor: pointer;
-    }
-
-    .tag-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 12px;
-    }
-
-    .tag-text {
-      color: var(--accent-orange);
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .dark-card-title {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .dark-card-desc {
-      font-size: 13px;
-      color: #A09C99;
-      line-height: 1.5;
-      margin-bottom: 16px;
-    }
-
-    .learn-more {
-      color: var(--accent-orange);
-      font-size: 13px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    /* Section Title */
-    .section-title {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 14px;
-    }
-
-    /* Category Chips */
-    .chips-row {
-      display: flex;
-      gap: 10px;
-      overflow-x: auto;
-      padding-bottom: 10px;
-    }
-
-    .chip {
-      background-color: var(--bg-secondary);
-      padding: 10px 18px;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text-primary);
-      white-space: nowrap;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="phone-mockup">
-    <div class="content">
+  <div class="app-container">
+    <!-- Cabeçalho com botão da sacola clicável -->
+    <header class="header">
+      <div class="brand">✦ SKINCARE GLOW</div>
+      <button type="button" class="icon-btn cart-btn" onclick="alert('Sacola clicada!')" aria-label="Carrinho">
+        🛍️
+      </button>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="card banner-card">
+      <span class="tag-orange">ALTA PERFORMANCE</span>
+      <h1>REVEAL YOUR BEAUTY <em>with</em> SKINCARE</h1>
+      <p>Fórmulas concentradas para desacelerar o envelhecimento e recuperar a saúde da sua pele.</p>
       
-      <!-- Topo/Header -->
-      <div class="header">
-        <div class="brand-name">✦ SKINCARE GLOW</div>
-        <div class="icon-bag">🛍️</div>
-      </div>
+      <button type="button" class="btn-primary" onclick="alert('Descobrir tipo de pele clicado!')">
+        DESCUBRIR TIPO DE PELE &rarr;
+      </button>
+    </section>
 
-      <!-- Hero Card -->
-      <div class="hero-card">
-        <div class="hero-subtitle">Alta Performance</div>
-        <h1 class="hero-title">REVEAL YOUR BEAUTY <em>with</em> SKINCARE</h1>
-        <p class="hero-desc">Fórmulas concentradas para desacelerar o envelhecimento e recuperar a saúde da sua pele.</p>
-        <button class="cta-btn">DESCUBRIR TIPO DE PELE →</button>
+    <!-- Card Dermatologia -->
+    <section class="card dark-card">
+      <div class="card-subtitle">
+        <span>🧬</span> Dermatologia & Ciência
       </div>
+      <h2>Glicação Cutânea</h2>
+      <p>Saiba como o excesso de açúcar danifica as fibras de colágeno e acelera o envelhecimento.</p>
+      
+      <a href="#entender" class="link-orange" onclick="alert('Entender e Prevenir clicado!')">
+        Entender e Prevenir &rarr;
+      </a>
+    </section>
 
-      <!-- Card Destaque: Glicação -->
-      <div class="glycation-card">
-        <div class="tag-row">
-          <span>🧬</span>
-          <span class="tag-text">Dermatologia & Ciência</span>
-        </div>
-        <h2 class="dark-card-title">Glicação Cutânea</h2>
-        <p class="dark-card-desc">Saiba como o excesso de açúcar danifica as fibras de colágeno e acelera o envelhecimento.</p>
-        <div class="learn-more">Entender e Prevenir →</div>
+    <!-- Seção Pele & Tratamentos com botões clicáveis -->
+    <section class="treatments-section">
+      <h3>Pele & Tratamentos</h3>
+      <div class="buttons-group">
+        <button type="button" class="pill-btn" onclick="alert('Pele Oleosa clicada!')">
+          💧 Oleosa
+        </button>
+        <button type="button" class="pill-btn" onclick="alert('Pele Seca clicada!')">
+          🌾 Seca
+        </button>
+        <button type="button" class="pill-btn" onclick="alert('Pele Sensível clicada!')">
+          🍇 Sensível
+        </button>
       </div>
-
-      <!-- Tipos de Pele -->
-      <h3 class="section-title">Pele & Tratamentos</h3>
-      <div class="chips-row">
-        <div class="chip">💧 Oleosa</div>
-        <div class="chip">🌾 Seca</div>
-        <div class="chip">🗣️ Sensível</div>
-      </div>
-
-    </div>
+    </section>
   </div>
 
 </body>
